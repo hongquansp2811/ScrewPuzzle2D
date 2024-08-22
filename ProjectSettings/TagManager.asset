@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Bolt
+  - DeathZone
+  - Bar
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - HoleBoard
+  - Water
+  - UI
+  - Bolt
+  - Hole Of Bar
+  - 
+  - Bar
+  - Bar1
+  - Bar2
+  - Bar3
+  - Bar4
+  - Bar5
+  - Bar6
+  - Bar7
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Bar
+    uniqueID: 2441112829
+    locked: 0
+  - name: Screw
+    uniqueID: 893353963
+    locked: 0
+  - name: UI
+    uniqueID: 2535147777
+    locked: 0
