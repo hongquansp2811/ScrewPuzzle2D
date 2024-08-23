@@ -98,6 +98,7 @@ GameObject:
   - component: {fileID: 5939622457699611133}
   - component: {fileID: 5939622457699611129}
   - component: {fileID: 5088587840167151141}
+  - component: {fileID: 407778113859168669}
   m_Layer: 9
   m_Name: Bar
   m_TagString: Untagged
@@ -589,6 +590,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HasFallen: 0
+  overrideLayer: 0
+  layerOverride: 9
+--- !u!210 &407778113859168669
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5939622457699611106}
+  m_Enabled: 1
+  m_SortingLayerID: -1853854467
+  m_SortingLayer: 1
+  m_SortingOrder: 1
+  m_SortAtRoot: 0
 --- !u!1001 &4459648246988974174
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -718,6 +733,10 @@ PrefabInstance:
     - target: {fileID: 5101555914981194430, guid: 333aa37d377a8fb419f7f5021e8a6abd, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5101555915546740323, guid: 333aa37d377a8fb419f7f5021e8a6abd, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

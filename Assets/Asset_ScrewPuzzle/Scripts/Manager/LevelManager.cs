@@ -19,12 +19,20 @@ public class LevelManager : Singleton<LevelManager>
 
     public void OnStartGame()
     {
-        levelIndex = 1;
+        levelIndex = UserDataManager.Ins.GetCurrentLevel();
         LoadLevel(levelIndex);
     }
 
     public void OnReplay()
     {
+        LoadLevel(levelIndex);
+    }
+
+    public void OnSelectLevel(int level)
+    {
+        if (level < 0 || level > UserDataManager.Ins.GetHighestLevel()) return;
+        levelIndex = level;
+        UserDataManager.Ins.SaveCurrentLevel(levelIndex);
         LoadLevel(levelIndex);
     }
 
@@ -68,8 +76,8 @@ public class LevelManager : Singleton<LevelManager>
     internal void OnNextLevel()
     {
         levelIndex++;
-        //PlayerPrefs.SetInt("Level", levelIndex);
-        //PlayerPrefs.Save();
+        UserDataManager.Ins.SaveCurrentLevel(levelIndex);
+        UserDataManager.Ins.SaveHighestLevel(levelIndex);
         LoadLevel(levelIndex);
     }
 }

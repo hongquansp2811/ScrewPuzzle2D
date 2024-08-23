@@ -8,6 +8,7 @@ public class UIMainMenu : UICanvas
     public Button SettingBtn;
     public Button ADSBtn;
     public Button PlayBtn;
+    public ScrollViewMainMenu scrollViewMainMenu;
 
     private void Awake()
     {
