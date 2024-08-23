@@ -162,6 +162,9 @@ MonoBehaviour:
   - {fileID: -5247183674389910913, guid: 44c00e1b195c63e4ca336669709646cd, type: 3}
   - {fileID: 8247175052857314494, guid: 4003095fceb21794a990370acb23052b, type: 3}
   - {fileID: 6021436237566451027, guid: 0567daa748abdf240b8769bce18373bf, type: 3}
+  - {fileID: 938002347334646393, guid: 9228da7644b0a7a43a14704fc9dc3e52, type: 3}
+  - {fileID: 2353340093763437768, guid: 4e9f06b90a4d3b744ac5aa44701cca7d, type: 3}
+  - {fileID: 2410406040058406623, guid: bb9478189d7797a49a097a000b57348e, type: 3}
   currentMap: {fileID: 0}
 --- !u!4 &26484711
 Transform:
