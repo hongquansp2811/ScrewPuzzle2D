@@ -27,6 +27,7 @@ public class UIMainMenu : UICanvas
     {
         Debug.Log("Play Btn");
         Close();
+        LevelManager.Ins.OnStartGame();
         GameManager.Ins.ChangeState(GameState.Gameplay);
     }
 }

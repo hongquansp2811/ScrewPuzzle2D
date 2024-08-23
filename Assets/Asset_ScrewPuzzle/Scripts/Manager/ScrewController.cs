@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -56,7 +58,12 @@ public class ScrewController : Singleton<ScrewController>
 
             if (hitColliders.Length <= 0)
             {
-                if (selectedScrew != null) selectedScrew.ChangeAnim("IsScrewIn");
+                if (selectedScrew != null)
+                {
+                    SoundManager.Ins.PlaySound(SoundManager.Ins.removeScrew);
+                    selectedScrew.ChangeAnim("IsScrewIn");
+                    screwSelected = false;
+                }
                 return;
             }
 
@@ -89,12 +96,14 @@ public class ScrewController : Singleton<ScrewController>
                 screwSelected = true;
                 selectedScrew = screw;
                 selectedScrew.ChangeAnim("IsSelect");
+                SoundManager.Ins.PlaySound(SoundManager.Ins.selectBolt);
             }
             else
             {
                 if (screw == null && holeBoard == null)
                 {
                     selectedScrew.ChangeAnim("IsScrewIn");
+                    SoundManager.Ins.PlaySound(SoundManager.Ins.removeScrew);
                     return;
                 }
 
@@ -103,6 +112,7 @@ public class ScrewController : Singleton<ScrewController>
                     selectedScrew.ChangeAnim("IsScrewIn");
                     selectedScrew = screw;
                     selectedScrew.ChangeAnim("IsSelect");
+                    SoundManager.Ins.PlaySound(SoundManager.Ins.selectBolt);
                 }
                 else
                 {
@@ -111,6 +121,7 @@ public class ScrewController : Singleton<ScrewController>
                     selectedScrew.transform.position = holeBoard.transform.position;
                     screwSelected = false;
                     selectedScrew.ChangeAnim("IsScrewIn");
+                    SoundManager.Ins.PlaySound(SoundManager.Ins.removeScrew);
                     Debug.Log("Screw moved to hole");
                 }
             }
@@ -145,6 +156,7 @@ public class ScrewController : Singleton<ScrewController>
                 LevelManager.Ins.currentMap.screws.Remove(screw);
                 Destroy(screw.gameObject);
                 ChangeState(PlayerState.RemoveScrew);
+                SoundManager.Ins.PlaySound(SoundManager.Ins.removeScrew);
             }
             else
             {
@@ -155,7 +167,22 @@ public class ScrewController : Singleton<ScrewController>
 
     private void HandleHammerInteraction()
     {
+        EffectManager.Ins.OnUseHammer(this.transform.position);
+        SoundManager.Ins.PlaySound(SoundManager.Ins.hammer);
+        //Map currentMap = LevelManager.Ins.currentMap;
+        Camera.main.transform.DOShakePosition(0.5f, 0.3f, 10, 90, false, true);
+        BreakBar();
+        ChangeState(PlayerState.RemoveScrew);
+    }
 
+    private void BreakBar()
+    {
+        List<Bar> barsCanBreak = LevelManager.Ins.currentMap.listBar.Where(x => x.HasTotalBolt() <= 1 && !x.HasFallen).ToList();
+        if (barsCanBreak.Count <= 0) return;
+        int randomIndex = Random.Range(0, barsCanBreak.Count);
+        Bar randomBar = barsCanBreak[randomIndex];
+        if (randomBar == null) return;
+        randomBar.transform.DOMoveY(randomBar.transform.position.y + 1f, 0.3f).SetEase(Ease.OutBounce);
     }
 
     private void OnToolEffect()

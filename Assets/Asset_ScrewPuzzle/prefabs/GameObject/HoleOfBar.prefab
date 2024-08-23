@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5101555914981194425}
   - component: {fileID: 5005350529003634635}
+  - component: {fileID: 5652598272621388562}
   m_Layer: 7
   m_Name: HoleOfBar
   m_TagString: Untagged
@@ -68,6 +69,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.3
+--- !u!114 &5652598272621388562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5101555914981194430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55f1e8223e748324cba1407299b8aba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boltLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &5101555915304113346
 GameObject:
   m_ObjectHideFlags: 0

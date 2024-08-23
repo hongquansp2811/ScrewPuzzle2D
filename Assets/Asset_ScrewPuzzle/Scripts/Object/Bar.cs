@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,6 +6,24 @@ using UnityEngine;
 public class Bar : MonoBehaviour
 {
     public bool HasFallen;
+
+    public int HasTotalBolt()
+    {
+        // xem hiện tại có bao nhiêu ốc vít vào
+        List<BarHole> lsBarHole = new List<BarHole>();
+        lsBarHole.AddRange(GetComponentsInChildren<BarHole>());
+
+        int boltCount = 0;
+        foreach (var barHole in lsBarHole)
+        {
+            if (barHole.HasBolt())
+            {
+                boltCount++;
+            }
+        }
+        return boltCount;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         HandleColliderWithDeathZone(collision);

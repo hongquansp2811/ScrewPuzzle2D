@@ -832,7 +832,7 @@ GameObject:
   - component: {fileID: 349039564225079110}
   - component: {fileID: 7639867524089460969}
   m_Layer: 0
-  m_Name: Button Replay (1)
+  m_Name: Button Home
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -950,6 +950,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6439486393049660292}
+  - component: {fileID: 4395733998282808143}
   m_Layer: 0
   m_Name: UI - Pause
   m_TagString: Untagged
@@ -977,6 +978,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4395733998282808143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4925360630508805198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dedef956b8b76ec46bbe7d334c67683b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsDestroyOnClose: 0
+  ResumeBtn: {fileID: 204977697506866627}
+  ReplayBtn: {fileID: 2596999491646181360}
+  HomeBtn: {fileID: 7639867524089460969}
 --- !u!1 &6103703912946262233
 GameObject:
   m_ObjectHideFlags: 0

@@ -101,8 +101,8 @@ public class GameManager : Singleton<GameManager>
 
     private void HandleNextLeveltage()
     {
-        ChangeState(GameState.Gameplay);
         LevelManager.Ins.OnNextLevel();
+        ChangeState(GameState.Gameplay);
     }
 
     private void HandleWinStage()
@@ -110,17 +110,21 @@ public class GameManager : Singleton<GameManager>
         UIManager.Ins.CloseUI<UIGamePlay>();
         UIManager.Ins.CanvasParentTF.GetComponent<Canvas>().sortingLayerName = "UI";
         UIManager.Ins.OpenUI<UIVictory>();
+        SoundManager.Ins.PlaySound(SoundManager.Ins.win);
     }
 
     private void HandlePauseStage()
     {
+        UIManager.Ins.CloseUI<UIGamePlay>();
+        UIManager.Ins.CanvasParentTF.GetComponent<Canvas>().sortingLayerName = "UI";
+        UIManager.Ins.OpenUI<UIPause>();
     }
 
     private void HandleGamePlayStage()
     {
         UIManager.Ins.CanvasParentTF.GetComponent<Canvas>().sortingLayerName = "Default";
         UIManager.Ins.OpenUI<UIGamePlay>();
-        LevelManager.Ins.OnStartGame();
+        UIManager.Ins.OpenUI<UIGamePlay>().SetTextLevel(LevelManager.Ins.LevelIndex());
     }
 
     private void HandleMainMenuStage()

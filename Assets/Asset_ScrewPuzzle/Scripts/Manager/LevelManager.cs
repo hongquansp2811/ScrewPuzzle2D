@@ -15,7 +15,15 @@ public class LevelManager : Singleton<LevelManager>
         levelIndex = 1;
     }
 
+    public int LevelIndex() { return levelIndex; }
+
     public void OnStartGame()
+    {
+        levelIndex = 1;
+        LoadLevel(levelIndex);
+    }
+
+    public void OnReplay()
     {
         LoadLevel(levelIndex);
     }
