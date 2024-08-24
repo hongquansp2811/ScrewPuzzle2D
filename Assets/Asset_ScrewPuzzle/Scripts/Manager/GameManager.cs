@@ -75,7 +75,8 @@ public class GameManager : Singleton<GameManager>
     private void HandleSettingtage()
     {
         UIManager.Ins.CloseUI<UIMainMenu>();
-        UIManager.Ins.OpenUI<UISetting>();
+        //UIManager.Ins.CanvasParentTF.GetComponent<Canvas>().sortingLayerName = "UI";
+        UIManager.Ins.OpenUI<UISetting>().GetComponent<Canvas>().sortingLayerName = "UI"; ;
     }
 
     private void HandleUndoStage()

@@ -608,7 +608,7 @@ MonoBehaviour:
   UndoBtn: {fileID: 8972420498948023031}
   ToolBtn: {fileID: 4763689203429471809}
   HammerBtn: {fileID: 5860297897246566726}
-  ReplayBtn: {fileID: 8134930850459509884}
+  ReplayBtn: {fileID: 5727124360752789513}
   levelTxt: {fileID: 379096442395408496}
 --- !u!1 &6204873544587649666
 GameObject:

@@ -43,5 +43,9 @@ public class ScrollViewMainMenu : MonoBehaviour
             float newY = currentAnchoredPosition.y - yOffset * (index - 3);
             content.anchoredPosition = new Vector2(currentAnchoredPosition.x, newY);
         }
+        else
+        {
+            content.anchoredPosition = currentAnchoredPosition;
+        }
     }
 }

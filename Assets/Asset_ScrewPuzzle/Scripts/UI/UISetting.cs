@@ -45,6 +45,7 @@ public class UISetting : UICanvas
         soundOn.gameObject.SetActive(IsSound);
         soundOff.gameObject.SetActive(!IsSound);
         //SoundManager.Ins.
+        SoundManager.Ins.MuteSound(!IsSound);
     }
 
     private void OnVibrateButtonClick()

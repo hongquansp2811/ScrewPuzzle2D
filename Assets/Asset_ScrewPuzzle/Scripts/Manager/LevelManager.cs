@@ -76,6 +76,10 @@ public class LevelManager : Singleton<LevelManager>
     internal void OnNextLevel()
     {
         levelIndex++;
+        if (levelIndex > maps.Count)
+        {
+            levelIndex = (levelIndex) % maps.Count;
+        }
         UserDataManager.Ins.SaveCurrentLevel(levelIndex);
         UserDataManager.Ins.SaveHighestLevel(levelIndex);
         LoadLevel(levelIndex);
