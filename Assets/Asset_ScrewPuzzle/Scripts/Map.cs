@@ -6,6 +6,8 @@ public class Map : MonoBehaviour
 {
     public List<Bar> listBar = new List<Bar>();
     public List<Screw> screws = new List<Screw>();
+    public MapDataConfig mapDataConfig;
+
     private int barCount;
 
     private void Start()

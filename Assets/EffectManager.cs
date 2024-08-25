@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,7 @@ public class EffectManager : Singleton<EffectManager>
 {
     public GameObject VFXTouch;
     public GameObject VFXHammer;
+    private bool isVibrationEnabled = true;
 
     public void OnPlayVFX(Vector2 touchPos)
     {
@@ -25,5 +26,31 @@ public class EffectManager : Singleton<EffectManager>
     {
         yield return new WaitForSeconds(delay);
         Destroy(vfxInstance);
+    }
+
+    public void Vibrate()
+    {
+        if (isVibrationEnabled)
+        {
+            Handheld.Vibrate();
+        }
+    }
+
+    // Bật rung
+    public void EnableVibration()
+    {
+        isVibrationEnabled = true;
+    }
+
+    // Tắt rung
+    public void DisableVibration()
+    {
+        isVibrationEnabled = false;
+    }
+
+    // Kiểm tra trạng thái rung
+    public bool IsVibrationEnabled()
+    {
+        return isVibrationEnabled;
     }
 }

@@ -87,6 +87,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listBar: []
   screws: []
+  mapDataConfig: {fileID: 11400000, guid: 3dc14d1f13a8f39489efa9ac3e8eb3d4, type: 2}
 --- !u!1 &4864837898434912236
 GameObject:
   m_ObjectHideFlags: 0
