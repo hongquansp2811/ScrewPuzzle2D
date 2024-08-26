@@ -35,12 +35,12 @@ public class UIGamePlay : UICanvas
 
     private void OnClickToolButton()
     {
-        ScrewController.Ins.ChangeState(PlayerState.UseTool);
+        PlayerController.Ins.ChangeState(PlayerState.UseTool);
     }
 
     private void OnClickHammerButton()
     {
-        ScrewController.Ins.ChangeState(PlayerState.UseHammer);
+        PlayerController.Ins.ChangeState(PlayerState.UseHammer);
     }
 
     private void OnClickReplayBtn() 

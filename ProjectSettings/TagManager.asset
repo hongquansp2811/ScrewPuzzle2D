@@ -7,6 +7,7 @@ TagManager:
   - Bolt
   - DeathZone
   - Bar
+  - HoleBoard
   layers:
   - Default
   - TransparentFX
@@ -39,7 +40,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Axe
   m_SortingLayers:
   - name: Default
     uniqueID: 0

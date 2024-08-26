@@ -6,4 +6,5 @@ using UnityEngine;
 public class MapDataConfig : ScriptableObject
 {
     public int time;
+    public Pendulum pendulum;
 }

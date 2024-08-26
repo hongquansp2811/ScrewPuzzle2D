@@ -20,6 +20,7 @@ public class SoundManager : Singleton<SoundManager>
     public SoundInfo hammer;
     public SoundInfo removeScrew;
     public SoundInfo win;
+    public SoundInfo lose;
 
     private bool isMuted = false;
     private float masterVolume = 1f;

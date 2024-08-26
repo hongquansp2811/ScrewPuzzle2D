@@ -7,7 +7,7 @@ using UnityEngine;
 public enum GameState
 {
     MainMenu, Gameplay, Pause, Win, Undo,
-    Setting, NextLevel, Revive
+    Setting, NextLevel, Revive,LoseGame
 }
 
 public class GameManager : Singleton<GameManager>
@@ -68,6 +68,9 @@ public class GameManager : Singleton<GameManager>
                 break;
             case GameState.NextLevel:
                 HandleNextLeveltage();
+                break;
+            case GameState.LoseGame:
+                HandleLoseGametage();
                 break;
         }
     }
@@ -133,5 +136,13 @@ public class GameManager : Singleton<GameManager>
         UIManager.Ins.CloseUI<UIGamePlay>();
         UIManager.Ins.OpenUI<UIMainMenu>();
         UIManager.Ins.OpenUI<UIMainMenu>().scrollViewMainMenu.FocusOnHighestLevel();
+    }
+
+    private void HandleLoseGametage() 
+    {
+        UIManager.Ins.CloseUI<UIGamePlay>();
+        UIManager.Ins.OpenUI<UILoseGame>();
+        UIManager.Ins.OpenUI<UILoseGame>().GetComponent<Canvas>().sortingLayerName = "UI"; ;
+        SoundManager.Ins.PlaySound(SoundManager.Ins.lose);
     }
 }

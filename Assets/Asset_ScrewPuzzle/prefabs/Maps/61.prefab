@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 6746457985866894579}
   - component: {fileID: -2962177596869639912}
   m_Layer: 0
-  m_Name: 23-1
+  m_Name: 61
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,6 +85,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   listBar: []
   screws: []
+  mapDataConfig: {fileID: 11400000, guid: 74db8beb4a6571447b86b750bacf2567, type: 2}
 --- !u!1 &4088177390591105722
 GameObject:
   m_ObjectHideFlags: 0

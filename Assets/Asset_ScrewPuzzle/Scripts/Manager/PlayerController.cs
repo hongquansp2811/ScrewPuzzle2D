@@ -10,7 +10,7 @@ public enum PlayerState
     RemoveScrew, UseTool, UseHammer
 }
 
-public class ScrewController : Singleton<ScrewController>
+public class PlayerController : Singleton<PlayerController>
 {
     public LayerMask screwLayer; // Layer cho đinh ốc
     public LayerMask holeLayer;  // Layer cho lỗ đinh
@@ -72,6 +72,13 @@ public class ScrewController : Singleton<ScrewController>
 
             foreach (Collider2D collider in hitColliders)
             {
+                Pendulum pendulum = Caching.GetComponentFromCache<Pendulum>(collider);
+                if (pendulum != null) 
+                {
+                    GameManager.Ins.ChangeState(GameState.LoseGame);
+                    break;
+                }
+
                 HoleBoard cachedHoleBoard = Caching.GetComponentFromCache<HoleBoard>(collider);
                 if (cachedHoleBoard != null)
                 {
@@ -116,7 +123,7 @@ public class ScrewController : Singleton<ScrewController>
                 }
                 else
                 {
-                    if (holeBoard.IsHoleFree) return;
+                    if (!holeBoard.CheckHoleFree()) return;
                     UndoManager.Ins.SaveState(LevelManager.Ins.currentMap.screws, LevelManager.Ins.currentMap.listBar);
                     selectedScrew.transform.position = holeBoard.transform.position;
                     screwSelected = false;

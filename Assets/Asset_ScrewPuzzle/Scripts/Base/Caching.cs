@@ -8,6 +8,7 @@ public class Caching : MonoBehaviour
     public const string CACHE_TAG_BOLT = "Bolt";
     public const string CACHE_TAG_DEATHZONE = "DeathZone";
     public const string CACHE_TAG_BAR = "Bar";
+    public const string CACHE_TAG_HOLE = "HoleBoard";
 
     // Cache Anim
     public const string CACHE_ANIM_IDLE = "IsIdle";

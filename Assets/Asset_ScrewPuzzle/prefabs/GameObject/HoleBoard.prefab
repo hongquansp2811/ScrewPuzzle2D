@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6263918813180474913}
   m_Layer: 3
   m_Name: HoleBoard
-  m_TagString: Untagged
+  m_TagString: HoleBoard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,6 +81,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb3b66fc2e8227b4c8e1e7fadf84a202, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsHoleFree: 0
 --- !u!1 &1118157225710756222
 GameObject:
   m_ObjectHideFlags: 0
