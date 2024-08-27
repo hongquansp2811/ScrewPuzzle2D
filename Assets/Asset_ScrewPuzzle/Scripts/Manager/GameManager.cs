@@ -135,6 +135,7 @@ public class GameManager : Singleton<GameManager>
     {
         UIManager.Ins.CloseUI<UIGamePlay>();
         UIManager.Ins.OpenUI<UIMainMenu>();
+        UIManager.Ins.CanvasParentTF.GetComponent<Canvas>().sortingLayerName = "UI";
         UIManager.Ins.OpenUI<UIMainMenu>().scrollViewMainMenu.FocusOnHighestLevel();
     }
 

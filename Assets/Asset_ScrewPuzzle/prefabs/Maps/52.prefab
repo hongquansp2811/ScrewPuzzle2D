@@ -2483,7 +2483,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 578604530809008469, guid: 4228fabc3ba6f1041829c4ee8360e959, type: 3}
       propertyPath: m_Layer
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1929905793041613766, guid: 4228fabc3ba6f1041829c4ee8360e959, type: 3}
       propertyPath: m_Points.m_Paths.Array.size
@@ -7241,6 +7241,10 @@ PrefabInstance:
     - target: {fileID: 3769728466683816388, guid: 59895ae62667e7145b8406482038c1d4, type: 3}
       propertyPath: m_Name
       value: Bar circle Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769728466683816388, guid: 59895ae62667e7145b8406482038c1d4, type: 3}
+      propertyPath: m_Layer
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6830293268297004981, guid: 59895ae62667e7145b8406482038c1d4, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.size
@@ -14046,7 +14050,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 578604530809008469, guid: 4228fabc3ba6f1041829c4ee8360e959, type: 3}
       propertyPath: m_Layer
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 1929905793041613766, guid: 4228fabc3ba6f1041829c4ee8360e959, type: 3}
       propertyPath: m_Points.m_Paths.Array.size
@@ -17644,6 +17648,10 @@ PrefabInstance:
     - target: {fileID: 3769728466683816388, guid: 59895ae62667e7145b8406482038c1d4, type: 3}
       propertyPath: m_Name
       value: Bar circle Variant (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3769728466683816388, guid: 59895ae62667e7145b8406482038c1d4, type: 3}
+      propertyPath: m_Layer
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 6830293268297004981, guid: 59895ae62667e7145b8406482038c1d4, type: 3}
       propertyPath: m_CompositePaths.m_Paths.Array.data[0].Array.size

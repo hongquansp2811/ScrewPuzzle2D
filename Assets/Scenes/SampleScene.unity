@@ -212,6 +212,9 @@ MonoBehaviour:
   - {fileID: 2462870912956648177, guid: 0bba316b5740daa40af8489027d14e89, type: 3}
   - {fileID: 6420720492776318808, guid: 93ec1fefc40ab3d4d884f78c7acbdbe4, type: 3}
   - {fileID: -4088104550810056136, guid: cb1563255cdb6b34e8ed1fda62c0ffc0, type: 3}
+  - {fileID: 8700282697618730559, guid: 5d436f724a05c6e4d9b4bfd615634f44, type: 3}
+  - {fileID: -8412950945995498088, guid: 5477a16d2062f5046be194cc3e132ed0, type: 3}
+  - {fileID: -2962177596869639912, guid: 6d4ed6286e3211e44b7e2cf6cb375a0e, type: 3}
   currentMap: {fileID: 0}
 --- !u!4 &26484711
 Transform:
@@ -861,6 +864,11 @@ MonoBehaviour:
     source: {fileID: 0}
   win:
     clip: {fileID: 8300000, guid: 93715b00658f3ca4b8235917d955354f, type: 3}
+    volume: 1
+    loop: 0
+    source: {fileID: 0}
+  lose:
+    clip: {fileID: 0}
     volume: 1
     loop: 0
     source: {fileID: 0}

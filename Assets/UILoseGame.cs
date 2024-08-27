@@ -17,7 +17,6 @@ public class UILoseGame : UICanvas
     private void OnClickHomeButton() 
     {
         Close();
-        UIManager.Ins.CloseUI<UIGamePlay>();
         GameManager.Ins.ChangeState(GameState.MainMenu);
     }
 

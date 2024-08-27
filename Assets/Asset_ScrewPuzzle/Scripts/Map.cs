@@ -20,10 +20,6 @@ public class Map : MonoBehaviour
         listBar.AddRange(GetComponentsInChildren<Bar>());
         screws.AddRange(GetComponentsInChildren<Screw>());
         barCount = listBar.Count;
-        if(mapDataConfig.pendulum != null)
-        {
-            Instantiate(mapDataConfig.pendulum);
-        }
     }
 
     public void RemoveBarInMap() {  barCount--; }

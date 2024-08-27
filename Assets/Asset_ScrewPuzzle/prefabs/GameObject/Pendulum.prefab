@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7252923403453031760}
   - component: {fileID: 580102685237690853}
   - component: {fileID: 1029954113155872288}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Pendulum
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 691421010036454939}
   - component: {fileID: 7616043389151202279}
   - component: {fileID: 3341276511643788470}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Graphic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,9 +275,9 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: -1853854467
+  m_SortingLayer: 1
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: dad9879adeb9fc1418274e03690a3680, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
