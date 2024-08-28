@@ -20,8 +20,13 @@ public class ScrollViewMainMenu : MonoBehaviour
         SetUpItemLevel();
     }
 
-    private void SetUpItemLevel()
+    public void SetUpItemLevel()
     {
+        foreach (Transform child in content)
+        {
+            Destroy(child.gameObject);
+        }
+
         float posX = 20f;
         for (int i = 0; i < LevelManager.Ins.maps.Count; i++)
         {

@@ -33,9 +33,8 @@ public class GameManager : Singleton<GameManager>
         {
             Screen.SetResolution(Mathf.RoundToInt(ratio * (float)maxScreenHeight), maxScreenHeight, true);
         }
-
         //Init data
-       // UserData.Ins.OnInitData();
+        // UserData.Ins.OnInitData();
     }
 
     private void Start()
@@ -136,6 +135,7 @@ public class GameManager : Singleton<GameManager>
         UIManager.Ins.CloseUI<UIGamePlay>();
         UIManager.Ins.OpenUI<UIMainMenu>();
         UIManager.Ins.CanvasParentTF.GetComponent<Canvas>().sortingLayerName = "UI";
+        UIManager.Ins.OpenUI<UIMainMenu>().scrollViewMainMenu.SetUpItemLevel();
         UIManager.Ins.OpenUI<UIMainMenu>().scrollViewMainMenu.FocusOnHighestLevel();
     }
 
